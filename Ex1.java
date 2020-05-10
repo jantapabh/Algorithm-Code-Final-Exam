@@ -10,9 +10,10 @@ public class Ex1{
         System.out.println(Str); 
           
         // Using replaceFirst to replace regex with replace_str 
-        // Replaces 1st occurrence of geeks with ASTHA 
+        // Replaces 1st occurrence of are happy with %20are%20happy
         System.out.print("After replacing  : " ); 
-        System.out.println(Str.replaceFirst(" are happy", "%20are%20happy"));     
+        String Str2 = Str.replaceFirst(" ", "%20"); 
+        System.out.println(Str2.replaceFirst(" ", "%20"));
 
     }
 
