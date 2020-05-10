@@ -12,9 +12,9 @@ public class Ex1{
         // Using replaceFirst to replace regex with replace_str 
         // Replaces 1st occurrence of are happy with %20are%20happy
         System.out.print("After replacing  : " ); 
-        String Str2 = Str.replaceFirst(" ", "%20"); 
-        System.out.println(Str2.replaceFirst(" ", "%20"));
-
+        String Str2 = Str.replaceFirst(" are happy", "%20are%20happy"); 
+        System.out.println(Str2);
+        System.out.println(Str2.length());
     }
 
  }
