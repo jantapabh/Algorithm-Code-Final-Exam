@@ -1,17 +1,19 @@
 
 public class Ex1{
     public static void main(String args[]){
-
-        String Str = new String("Welcome to geeksforgeeks"); 
         
-        // Using replace to replace characters 
-        System.out.print("After replacing all o with T : " ); 
-        System.out.println(Str.replace('o', 'T')); 
+        // Initialising String 
+        String Str = new String("we are happy"); 
           
-        // Using replace to replace characters 
-        System.out.print("After replacing all e with D : " ); 
-        System.out.println(Str.replace('e', 'D')); 
-        
+        // original string  
+        System.out.print("Original String : " ); 
+        System.out.println(Str); 
+          
+        // Using replaceFirst to replace regex with replace_str 
+        // Replaces 1st occurrence of geeks with ASTHA 
+        System.out.print("After replacing  : " ); 
+        System.out.println(Str.replaceFirst(" are happy", "%20are%20happy"));     
+
     }
 
  }
