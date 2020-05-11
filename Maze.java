@@ -26,6 +26,9 @@ import java.util.*;
 
 public class Maze 
 {
+
+
+
   private static final int FLOOR = 0;
   private static final int WALL = 1;
   private static final int START = 2;
@@ -164,5 +167,6 @@ public class Maze
   {  for (int i = 0; i < visited.length; i++)
        Arrays.fill(visited[i], false);
   }
+  
 
 }  // end of Maze class

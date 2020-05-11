@@ -19,16 +19,27 @@ public class Solver
           { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };  // (dx, dy)
          //  DOWN    RIGHT    UP      LEFT
 
-
+         public static void main(String args[]) throws Exception 
+         {
+           if (args.length != 1)
+             System.out.println("Usage: java Solver <maze textfile>");
+           else {
+             Maze maze = new Maze( new File(args[0])); 
+             Solver dfs = new Solver(maze);
+           }
+         }
+       
   public Solver(Maze maze) 
   {
     ArrayList<Coord> path = new ArrayList<>();
+
     Coord entry = maze.getEntry();
     if (explore(maze, entry.getX(), entry.getY(), path)) {
        maze.printPath(path);
-       // maze.reset();
+      //  maze.reset();
     }
     else
+
       System.out.println("No path found");
   }  // end of Solver()
 
@@ -66,14 +77,5 @@ public class Solver
   // --------------------------------------------
 
 
-  public static void main(String[] args) throws Exception 
-  {
-    if (args.length != 1)
-      System.out.println("Usage: java Solver <maze textfile>");
-    else {
-      Maze maze = new Maze( new File(args[0])); 
-      Solver dfs = new Solver(maze);
-    }
-  }
-
+ 
 }  // end of Solver class
